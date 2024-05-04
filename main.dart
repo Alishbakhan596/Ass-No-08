@@ -1,7 +1,24 @@
+import 'dart:io';
+
 void main() {
   //Q1. Write a Dart program that counts the number of digits in a given number using a while loop.
+  int num9 = 4567;
+  int counts = 0;
+  while (num9 != 0) {
+    num9 ~/= 10;
+    counts++;
+  }
+  print("Number of digits in $num9 : $counts");
 
   //Q2. Implement Dart code to generate a random password of a given length using a while loop.
+  // print(getRandomString(5));  // 5GKjb
+  // print(getRandomString(10)); // LZrJOTBNGA
+  // print(getRandomString(15)); // PqokAO1BQBHyJVK
+  // const _chars =
+  //     'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890';
+  // Random _rnd = Random();
+  // String getRandomString(int length) => String.fromCharCodes(Iterable.generate(
+  //     length, (_) => _chars.CodeUnitAt(_rnd.nextInt(_chars.length))));
 
   //Q3.Implement Dart code to print the multiplication table of a given
   // number using a while loop.
@@ -43,7 +60,7 @@ void main() {
   int factorial = 1;
   int a = 1;
   while (a <= num3) {
-    factorial *= i;
+    factorial *= a;
     a++;
   }
   print("Factorial of $num3 is: $factorial");
@@ -87,11 +104,11 @@ void main() {
   //Q10. Create Dart code to calculate the average of numbers in a list using a do-while loop.
   List<int> num6 = [5, 10, 15, 20, 25];
   int sum = 0;
-  int counts = 0;
+  int Count = 0;
   do {
-    sum += num6[counts];
-    counts++;
-  } while (counts < num6.length);
+    sum += num6[Count];
+    Count++;
+  } while (Count < num6.length);
   double average = sum / num6.length;
 
   print("Average of numbers in a list : $average");
